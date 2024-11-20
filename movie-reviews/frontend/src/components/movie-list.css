@@ -1,0 +1,49 @@
+/* Scoped styles for MoviesList component */
+.movies-list-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Four columns */
+    gap: 10px; /* Spacing between cards */
+    padding: 20px;
+  }
+  
+  /* Style for individual cards in MoviesList */
+  .movies-list-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 500px; /* Fixed height for uniformity */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  
+  .movies-list-card img {
+    height: 200px;
+    object-fit: cover;
+    width: 100%;
+  }
+  
+  .movies-list-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Responsive adjustments for smaller screens */
+  @media (max-width: 1024px) {
+    .movies-list-grid {
+      grid-template-columns: repeat(3, 1fr); /* Three columns */
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .movies-list-grid {
+      grid-template-columns: repeat(2, 1fr); /* Two columns */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .movies-list-grid {
+      grid-template-columns: repeat(1, 1fr); /* Single column */
+    }
+  }
+  
